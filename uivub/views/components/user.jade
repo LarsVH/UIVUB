@@ -1,0 +1,61 @@
+
+mixin user(username, ava)
+   .col-sm-6
+      .row.text-center.text-2x
+         .col-sm-4.center
+            span.fa-stack.fa-2x
+               i.fa.fa-user.fa-stack-1x
+               if(ava)
+                  i.fa.fa-check.fa-stack-1x(style="color: #20a200")
+               else
+                  i.fa.fa-close.fa-stack-1x(style="color: #b40000")
+         .col-sm-8.center
+            = username
+
+
+.container
+   .form-card
+      .col-sm-1.vh95
+         .center
+            i.fa.fa-caret-left.fa-2x.fa-align-center
+      .col-sm-10
+         .vh25
+            .center
+               .row
+                  .col-md-12.text-center.text-white
+                     button.btn.btn-lg.btn-primary.vw50.text-3x
+                        i.fa.fa-book
+                        |   Request Meeting
+         .row(style="margin-top: 2em")
+            table.table.table-hover
+               thead
+                  tr
+                     th Status
+                     th Name
+                     th Current Location
+               tbody
+                  tr
+                     td
+                        i.fa.fa-check(style="color: #20a200")
+                     td Olga de Troyer
+                     td G.10.302
+                  tr
+                     td
+                        i.fa.fa-check(style="color: #20a200")
+                     td Tim Witters
+                     td G.10.302
+                  tr.danger
+                     td
+                        i.fa.fa-close(style="color: #b40000")
+                     td Lars van Holsbeek
+                     td G.10.302
+                  tr
+                     td
+                        i.fa.fa-check(style="color: #20a200")
+                     td Jolan Witters
+                     td G.10.302
+
+
+      .col-sm-1.vh95
+         .center
+            i.fa.fa-caret-right.fa-2x.fa-align-center

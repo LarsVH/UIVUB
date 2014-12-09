@@ -2,18 +2,26 @@ html
    head
       title= title
       link(rel='stylesheet', href='/css/bootstrap.css')
+      link(rel='stylesheet', href='/css/font-awesome.css')
+      link(rel='stylesheet', href='/plugin/slick/slick.css')
       link(rel='stylesheet', href='/css/vub.css')
+         
    body
-      .container-fluid.text-white(style="background-color: rgba(121, 158, 53, 100); height: 100%")
-         .row
-            .col-md-12.text-center
-               h4 Available
-         .row
-            .col-md-12.text-center
-               h1 Tim Witters
-         .row
-            .col-md-12.text-center
-               h2 19:30
-            
+      div.slider
+         -var available = false
+         include ./components/settings.jade
+         include ./components/home.jade
+         include ./components/user.jade
 
+   
+   script(src='http://code.jquery.com/jquery-2.1.1.js')
    script(src='/js/bootstrap.js')
+   script(src='/plugin/slick/slick.js')
+   script(type='text/javascript').
+      $(document).ready(function(){
+         $('.slider').slick({
+            accessibility: true,
+            arrows: false , 
+            adaptiveHeight: true});
+      });
+      
