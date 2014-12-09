@@ -1,5 +1,19 @@
-extends layout
+html
+   head
+      title= title
+      link(rel='stylesheet', href='/css/bootstrap.css')
+      link(rel='stylesheet', href='/css/vub.css')
+   body
+      .container-fluid.text-white(style="background-color: rgba(121, 158, 53, 100); height: 100%")
+         .row
+            .col-md-12.text-center
+               h4 Available
+         .row
+            .col-md-12.text-center
+               h1 Tim Witters
+         .row
+            .col-md-12.text-center
+               h2 19:30
+            
 
-block content
-  h1= title
-  p Welcome to #{title}
+   script(src='/js/bootstrap.js')
