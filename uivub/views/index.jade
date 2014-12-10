@@ -25,15 +25,34 @@ html
             arrows: false , 
             adaptiveHeight: true,
             initialSlide: 1});
+            
+         var ava = true
+         $('#away').hide();
       });
       
       
       
       $('.next').on('click', function(e) {
          $('.slider').slickNext()
+         
       })
       
       $('.prev').on('click', function(e) {
          $('.slider').slickPrev()
+      })
+      
+      $('.switch').on('click', function(e) {
+      
+         if (ava) {
+            $('#ava').fadeOut(400, function() {
+               $('#away').fadeIn();
+            })
+            
+         } else {
+            $('#away').fadeOut(400,function() {
+               $('#ava').fadeIn();
+            })
+         }
+         ava = !ava
       })
       

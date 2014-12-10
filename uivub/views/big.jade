@@ -1,0 +1,70 @@
+html
+   head
+      title= title
+      link(rel='stylesheet', href='/css/bootstrap.css')
+      link(rel='stylesheet', href='/css/font-awesome.css')
+      link(rel='stylesheet', href='/plugin/slick/slick.css')
+      link(rel='stylesheet', href='/css/vub.css')
+      
+      script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places")
+         
+   body
+      .container-fluid
+         .row.text-center
+            h1 Wise Screen 4k
+         
+         .row
+            .col-md-6
+               .vh95.form-card.padding-2x
+                  
+                     .row
+                        h1 Professors
+                        table.table.table-hover.text-2x
+                           thead
+                              tr
+                                 th Status
+                                 th Name
+                                 th Activity
+                           tbody
+                              tr
+                                 td
+                                 td Tim Witters
+                                 td Meeting
+                              tr
+                                 td
+                                 td Jaja Toure
+                                 td Free
+                  
+                     .row
+                        h1 Assistents
+                        table.table.table-hover.text-2x
+                           thead
+                              tr
+                                 th Status
+                                 th Name
+                                 th Activity
+                           tbody
+                              tr
+                                 td
+                                 td Tim Witters
+                                 td Meeting
+                              tr
+                                 td
+                                 td Jaja Toure
+                                 td Free
+            .col-md-6
+               .form-card.vh95
+                  .maxwh#map-canvas
+
+      
+   script(src='http://code.jquery.com/jquery-2.1.1.js')
+   script(src='/js/bootstrap.js')
+   script(src='/plugin/slick/slick.js')
+   script(type='text/javascript').
+      $(document).ready(function() {
+         var mapOptions = {
+              center: { lat: 50.821372, lng: 4.3957394},
+              zoom: 21 };
+         map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+        
+      })

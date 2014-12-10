@@ -66,10 +66,10 @@
 .box-shadow {box-shadow: 4px 4px 4px #888888}
 
 
-body {
-   background: #f8f8f8;
-}
+body {background: #f8f8f8;}
 
-.slick-slide {
-   height: inherit;
-}
+.slick-slide { height: inherit;}
+.padding-2x{padding: 2em}
+.margin-2x{margin: 2em}
+
+.maxwh {height: 100%; width: 100%}
