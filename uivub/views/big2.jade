@@ -1,0 +1,113 @@
+html
+   head
+      title= title
+      link(rel='stylesheet', href='/css/bootstrap.css')
+      link(rel='stylesheet', href='/css/font-awesome.css')
+      link(rel='stylesheet', href='/plugin/slick/slick.css')
+      link(rel='stylesheet', href='/css/simple-sidebar.css')
+      link(rel='stylesheet', href='/css/vub.css')
+      
+      script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places")
+         
+   body(style="background: #2e2e2e;")
+      div(style="height: 100%; width: 25%; background: #2e2e2e; float:left; display:inline;")
+         p.text-center(style="color: #ffffff; padding-top: 20px; font-size: 300%") WebIs Title Here
+         
+         ul(style="list-style-type: none; color: #ffffff; padding: 40px; font-size: 200%")
+            li(style="padding-bottom: 5px;margin-bottom: 10px;") 
+               .row
+                  .col-sm-12.text-center
+                     h1 Professors
+            li(style="border-bottom: 1px solid; padding-bottom: 5px;margin-bottom: 10px;") 
+               .row
+                  .col-sm-2
+                     i.fa.fa-check
+                  .col-sm-6
+                     | Item
+                  .col-sm-4
+                     | G.10.102
+            li(style="border-bottom: 1px solid;padding-bottom: 5px;margin-bottom: 10px;") 
+                  .row
+                     .col-sm-2
+                        i.fa.fa-check
+                     .col-sm-6
+                        | Item
+                     .col-sm-4
+                        | G.10.102
+            li(style="border-bottom: 1px solid;padding-bottom: 5px;margin-bottom: 10px;") 
+               .row
+                  .col-sm-2
+                     i.fa.fa-check
+                  .col-sm-6
+                     | Item
+                  .col-sm-4
+                     | G.10.102
+            li(style="border-bottom: 1px solid;padding-bottom: 5px;margin-bottom: 10px;") 
+               .row
+                  .col-sm-2
+                     i.fa.fa-check
+                  .col-sm-6
+                     | Item
+                  .col-sm-4
+                     | G.10.102
+            li(style="padding-bottom: 5px;margin-bottom: 10px; ") 
+               .row
+                  .col-sm-12.text-center
+                     h1 Assistents
+            li(style="border-bottom: 1px solid;padding-bottom: 5px;margin-bottom: 10px;") 
+               .row
+                  .col-sm-2
+                     i.fa.fa-check
+                  .col-sm-6
+                     | Item
+                  .col-sm-4
+                     | G.10.102
+            li(style="border-bottom: 1px solid;padding-bottom: 5px;margin-bottom: 10px;") 
+                  .row
+                     .col-sm-2
+                        i.fa.fa-check
+                     .col-sm-6
+                        | Item
+                     .col-sm-4
+                        | G.10.102
+            li(style="border-bottom: 1px solid;padding-bottom: 5px;margin-bottom: 10px;") 
+               .row
+                  .col-sm-2
+                     i.fa.fa-check
+                  .col-sm-6
+                     | Item
+                  .col-sm-4
+                     | G.10.102
+            li(style="border-bottom: 1px solid;padding-bottom: 5px;margin-bottom: 10px;") 
+               .row
+                  .col-sm-2
+                     i.fa.fa-check
+                  .col-sm-6
+                     | Item
+                  .col-sm-4
+                     | G.10.102
+         
+            
+      div(style=' height: 100%; width: 75%; float:left; display:inline;')
+         .container-fluid
+            //- .row
+            //-    .col-md-6
+            //-       .form-card
+            //-          h1.text-center 20:00
+            //-    .col-md-6
+            //-       .form-card
+            //-          h1.text-center 20:00
+            .row
+               .maxwh#map-canvas   
+      
+   script(src='http://code.jquery.com/jquery-2.1.1.js')
+   script(src='/js/bootstrap.js')
+   script(src='/plugin/slick/slick.js')
+   script(type='text/javascript').
+      $(document).ready(function() {
+         var mapOptions = {
+              center: { lat: 50.821372, lng: 4.3957394},
+              zoom: 21 };
+         map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+        
+      })

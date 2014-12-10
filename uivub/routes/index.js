@@ -10,4 +10,8 @@ router.get('/big', function(req, res) {
    res.render('big', {title: 'Big Layout'})
 })
 
+router.get('/big2', function(req, res) {
+   res.render('big2', {title: 'Big Layout'})
+})
+
 module.exports = router;

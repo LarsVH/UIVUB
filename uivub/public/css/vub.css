@@ -73,3 +73,32 @@ body {background: #f8f8f8;}
 .margin-2x{margin: 2em}
 
 .maxwh {height: 100%; width: 100%}
+
+.t-list {
+   padding-left: 40px;
+   padding-right: 40px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   list-style: none;
+}
+
+.t-list a {
+   display:inline-block
+}
+.t-sidebar {
+   box-sizing: border-box;
+   display: table-cell;
+   position: relative;
+   width: 25vw;
+   background: #2c2e2f;
+   z-index: 1;
+   height: 100vh
+}
+
+.t-side-fixed {
+   position: fixed;
+   top: 0px;
+   bottom: 0px;
+   left: 0px;
+   width: inherit;
+}
