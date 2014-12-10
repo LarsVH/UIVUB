@@ -8,10 +8,11 @@ html
          
    body
       div.slider
-         -var available = false
+         -var available = true
          include ./components/settings.jade
          include ./components/home.jade
          include ./components/user.jade
+         include ./components/slots.jade
 
    
    script(src='http://code.jquery.com/jquery-2.1.1.js')
@@ -22,6 +23,17 @@ html
          $('.slider').slick({
             accessibility: true,
             arrows: false , 
-            adaptiveHeight: true});
+            adaptiveHeight: true,
+            initialSlide: 1});
       });
+      
+      
+      
+      $('.next').on('click', function(e) {
+         $('.slider').slickNext()
+      })
+      
+      $('.prev').on('click', function(e) {
+         $('.slider').slickPrev()
+      })
       

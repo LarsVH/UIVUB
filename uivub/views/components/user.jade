@@ -15,7 +15,7 @@ mixin user(username, ava)
 
 .container
    .form-card
-      .col-sm-1.vh95
+      .col-sm-1.vh95.prev
          .center
             i.fa.fa-caret-left.fa-2x.fa-align-center
       .col-sm-10
@@ -23,11 +23,11 @@ mixin user(username, ava)
             .center
                .row
                   .col-md-12.text-center.text-white
-                     button.btn.btn-lg.btn-primary.vw50.text-3x
+                     button.btn.btn-lg.bg-lblue7.vw50.text-3x
                         i.fa.fa-book
                         |   Request Meeting
          .row(style="margin-top: 2em")
-            table.table.table-hover
+            table.table.table-hover.text-2x
                thead
                   tr
                      th Status
@@ -44,7 +44,7 @@ mixin user(username, ava)
                         i.fa.fa-check(style="color: #20a200")
                      td Tim Witters
                      td G.10.302
-                  tr.danger
+                  tr
                      td
                         i.fa.fa-close(style="color: #b40000")
                      td Lars van Holsbeek
@@ -56,6 +56,6 @@ mixin user(username, ava)
                      td G.10.302
 
 
-      .col-sm-1.vh95
+      .col-sm-1.vh95.next
          .center
             i.fa.fa-caret-right.fa-2x.fa-align-center

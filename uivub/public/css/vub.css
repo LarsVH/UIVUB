@@ -54,6 +54,18 @@
 
 .bg-purple {background: #6c6ada}
 .bg-orange {background: #FFA726}
+
+.bg-warning {background: #B71C1C}
+.bg-success {background: #8BC34A}
+.bg-lblue  {background: #03A9F4 ; color: #FFFFFF}
+.bg-lblue7 {background: #0288D1 ; color: #FFFFFF}
+.bg-lblue9 {background: #01579B ; color: #FFFFFF}
+.bg-yellow {background: #FFEB3B ; color: #5E5E5E}
+.bg-yellow7 {background: #FBC02D; color: #5E5E5E}
+.bg-yellow9 {background: #F57F17; color: #5E5E5E}
+.box-shadow {box-shadow: 4px 4px 4px #888888}
+
+
 body {
    background: #f8f8f8;
 }
