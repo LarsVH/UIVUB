@@ -1,0 +1,22 @@
+include ../mixin/profile.jade
+.container   
+   .row
+      .col-md-12.vh90
+         .row(style="padding-top: 2em")
+            .col-md-12
+                  +profileCard(true)(name="Olga De Troyer" status="Available")               
+            .col-md-12
+                  +profileCard(false)(name="Beat Signer" status="Lunch Break")               
+
+         .row(style="margin-top: 1em; margin-bottom: 8em")
+            .col-sm-12
+               .text-center
+                  i.fa.fa-arrow-down(style="padding-right: 1em")   
+                  h4(style="display: inline") Other Members (click for options)
+                  i.fa.fa-arrow-down(style="padding-left: 1em")   
+      .col-md-12
+         .row
+            +smallProfileCard(true)
+            +smallProfileCard(false)
+            +smallProfileCard(false)
+            +smallProfileCard(true)

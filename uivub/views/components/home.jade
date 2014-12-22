@@ -1,44 +1,25 @@
-.container
-   .form-card
-      .row
-         .col-sm-1.vh95.prev
-            .center
-               i.fa.fa-caret-left.fa-2x.fa-align-center
-         .col-sm-10
-            .vh25
-               .center
-                  .row
-                     .col-md-12.text-center
-                        button#ava.btn.btn-lg.bg-success.text-3x.vw50.text-white
-                           i.fa.fa-check-square-o
-                           |   Available
-                        button#away.btn.btn-lg.bg-warning.text-3x.vw50.active.text-white(hidden)
-                           i.fa.fa-close
-                           |   Away
-            .vh50
-               .center
-                  .row
-                     .col-md-12.text-center
-                        strong
-                           p.text-4x Tim Witters
-                           p.text-3x 20:00
-                              
-            .row
-               .col-sm-12.agenda-item.text-white.bg-lblue7
-                  .col-sm-12
-                     h3 10:00 - 12:00: Meeting
-            .row
-               .col-sm-12.agenda-item.bg-yellow
-                  .col-sm-10
-                     h3 12:00 - 13:00: Free Hours
-                  .col-sm-2
-                     h3.text-right
-                        i.fa.fa-book
-            .row
-               .col-sm-12.agenda-item.text-white.bg-lblue7
-                  .col-sm-12
-                     h3 15:00 - 17:00: Meeting
-                                    
-         .col-sm-1.vh95.next
-            .center
-               i.fa.fa-caret-right.fa-2x.fa-align-center
+include ../mixin/profile.jade
+.container   
+   .row
+      .col-md-12.vh90
+         .row.h74(style="padding-top: 5em")
+            .col-md-12
+               .row
+                  +profileCard()(name="Olga De Troyer")                
+               .row
+                  .col-sm-6
+                     button.btn.btn-lg.btn-default(style="width: 100%") Make Reservation
+                  .col-sm-6
+                     button.btn.btn-lg.btn-default(style="width: 100%") Member Schedule
+         .row(style="margin-top: 5em; margin-bottom: 7em")
+            .col-sm-12
+               .text-center
+                  i.fa.fa-arrow-down(style="padding-right: 1em")   
+                  h4(style="display: inline") Other Members (click for options)
+                  i.fa.fa-arrow-down(style="padding-left: 1em")   
+      .col-md-12
+         .row
+            +smallProfileCard(true)
+            +smallProfileCard(false)
+            +smallProfileCard(false)
+            +smallProfileCard(true)

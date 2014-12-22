@@ -1,23 +1,36 @@
 html
    head
       title= title
-      link(rel='stylesheet', href='/css/bootstrap.css')
+      //link(rel='stylesheet', href='/css/bootstrap.css')
       link(rel='stylesheet', href='/css/font-awesome.css')
       link(rel='stylesheet', href='/plugin/slick/slick.css')
+      link(rel='stylesheet', href='/css/style.default.css')
       link(rel='stylesheet', href='/css/vub.css')
          
    body
+      .container-fluid(style="height: 6em; background-color: #428BCA")
+         .container
+            .row.text-white
+               .col-sm-1
+                  i.fa.fa-caret-left.fa-2x.fa-align-left.h1
+               .col-sm-10.text-center
+                  h1 14:15
+               .col-sm-1
+                  i.fa.fa-caret-right.fa-2x.fa-align-right.h1
       div.slider
-         -var available = true
+         -var available = true         
          include ./components/settings.jade
-         include ./components/home.jade
-         include ./components/user.jade
+         include ./components/home2.jade
+         //include ./components/user.jade
          include ./components/slots.jade
+         include ./components/cal.jade
 
    
    script(src='http://code.jquery.com/jquery-2.1.1.js')
    script(src='/js/bootstrap.js')
    script(src='/plugin/slick/slick.js')
+   script(src='/js/custom.js')
+   script(src='/js/bootstrap-wizard.min.js')
    script(type='text/javascript').
       $(document).ready(function(){
          $('.slider').slick({
@@ -32,12 +45,12 @@ html
       
       
       
-      $('.next').on('click', function(e) {
+      $('.wnext').on('click', function(e) {
          $('.slider').slickNext()
          
       })
       
-      $('.prev').on('click', function(e) {
+      $('.wprev').on('click', function(e) {
          $('.slider').slickPrev()
       })
       
@@ -56,3 +69,23 @@ html
          ava = !ava
       })
       
+      // Basic Wizard
+       jQuery('#basicWizard').bootstrapWizard({
+           onTabShow: function(tab, navigation, index) {
+               window.scrollTo(0,0)
+               tab.prevAll().addClass('done');
+               tab.nextAll().removeClass('done');
+               tab.removeClass('done');
+               
+               var $total = navigation.find('li').length;
+               var $current = index + 1;
+               
+               if($current >= $total) {
+                   $('#basicWizard').find('.wizard .next').addClass('hide');
+                   $('#basicWizard').find('.wizard .finish').removeClass('hide');
+               } else {
+                   $('#basicWizard').find('.wizard .next').removeClass('hide');
+                   $('#basicWizard').find('.wizard .finish').addClass('hide');
+               }
+           }
+       });

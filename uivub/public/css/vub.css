@@ -2,9 +2,11 @@
    color: #ffffff
 }
 
+.vh20 {height: 20vh}
 .vh25 {height: 25vh}
 .vh50 {height: 50vh}
 .vh75 {height: 74vh}
+.vh90{height: 90vh}
 .vh95{height: 95vh}
 
 .vw50{width: 50vw}
@@ -15,7 +17,13 @@
 
 .w100{width: 100%}
 
+.p1em {padding: 1em}
+.p2em {padding: 2em}
 
+.m1em {margin: 1em}
+.m2em {margin: 1em}
+
+.nopadding {padding: 0}
 /* keep full widget on smaller screens */
 @media (max-width: 767px) {
    body {
@@ -101,4 +109,14 @@ body {background: #f8f8f8;}
    bottom: 0px;
    left: 0px;
    width: inherit;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.panel-danger-alt .panel-heading {
+background-color: #9a0000;
+color: #fff;
 }
