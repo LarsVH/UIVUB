@@ -1,7 +1,7 @@
 .container
   .row(style="zoom: 1.5")
-    form#basicWizard.panel-wizard(method="post")
-      ul.nav.nav-justified.nav-wizard.nav-pills
+    form#valWizard.panel-wizard(method="post" novalidate="novalidate")
+      ul.nav.nav-justified.nav-wizard.nav-wizard-success
         li.active
           a(href="#tab1", data-toggle="tab")
             strong Step 1:
@@ -33,9 +33,9 @@
            #tab2.tab-pane
              p.text-center (Scan VUB ID for fast entry()
              .form-group
-               label.col-sm-4 Name:
+               label.col-sm-4 Name (required):
                .col-sm-5
-                 input.form-control(type="text", name="product_id")
+                 input.form-control(type="text", name="product_id" required)
              // form-group
              .form-group
                label.col-sm-4 Student Number:
