@@ -5,12 +5,12 @@ include ../mixin/profile.jade
          .row.h74(style="padding-top: 5em")
             .col-md-12
                .row
-                  +profileCard()(name="Olga De Troyer" status= "Lunch Break")                
+                  +profileCard()(name="Olga De Troyer" status= "Lunch Break" id="switchValue")                
                .row
                   .col-sm-6
-                     button.btn.btn-lg.btn-default(style="width: 100%") Make Reservation
+                     button#makeReservation.btn.btn-lg.btn-default(style="width: 100%") Make Reservation
                   .col-sm-6
-                     button.btn.btn-lg.btn-default(style="width: 100%") Member Schedule
+                     button#MemberSchedule.btn.btn-lg.btn-default(style="width: 100%") Member Schedule
          .row(style="margin-top: 5em; margin-bottom: 7em")
             .col-sm-12
                .text-center

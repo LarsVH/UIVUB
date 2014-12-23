@@ -37,8 +37,9 @@ mixin smallProfile(status)
 
 mixin profileCard(success)
    - if (success) cls = "panel-success-alt"; else cls = "panel-danger-alt"
-   .col-md-12
-      .panel.noborder(class = cls)
+   - if (attributes.id) ; else attributes.id = "switchValueNot"
+   .col-md-12.profileCard
+      .panel.noborder(class = cls, id=attributes.id)
          .panel-heading.noborder
             .media-body.vcenter
                h5.md-title.nomargin Name
@@ -59,7 +60,7 @@ mixin profileCard(success)
       
 mixin smallProfileCard(status)
    if (status)
-         .col-sm-12
+         .col-sm-12.profileCard
             .panel.panel-success.noborder
                .panel-heading.noborder                                       
                   .media-body

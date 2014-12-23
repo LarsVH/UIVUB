@@ -28,6 +28,7 @@ html
 
    
    script(src='http://code.jquery.com/jquery-2.1.1.js')
+   script(src='/js/jquery-ui-1.10.3.min.js')
    script(src='/js/bootstrap.js')
    script(src='/plugin/slick/slick.js')
    script(src='/js/custom.js')
@@ -45,7 +46,7 @@ html
          $('#away').hide();
       });
       
-      
+
       
       $('.wnext').on('click', function(e) {
          $('.slider').slickNext()
@@ -57,18 +58,21 @@ html
       })
       
       $('.switch').on('click', function(e) {
+         $("#switchValue").toggleClass("panel-success-alt")
+         $("#switchValue").toggleClass("panel-danger-alt")
+         $('.slider').slickGoTo(1)
+      })
       
-         if (ava) {
-            $('#ava').fadeOut(400, function() {
-               $('#away').fadeIn();
-            })
-            
-         } else {
-            $('#away').fadeOut(400,function() {
-               $('#ava').fadeIn();
-            })
-         }
-         ava = !ava
+      $('#makeReservation').on('click', function () {
+         $('.slider').slickGoTo(3)
+      })
+      
+      $('#MemberSchedule').on('click', function () {
+         $('.slider').slickGoTo(4)
+      })
+      
+      $('.profileCard').on('click', function () {
+         $('.slider').slickGoTo(3)
       })
       
       
