@@ -59,12 +59,13 @@ mixin profileCard(success)
       // panel
       
 mixin smallProfileCard(status)
+   -if(attributes.name) ; else attributes.name = "Tim Witters"
    if (status)
          .col-sm-12.profileCard
             .panel.panel-success.noborder
                .panel-heading.noborder                                       
                   .media-body
-                     h3.pull-left Tim Witters                                             
+                     h3.pull-left= attributes.name                                           
                      h3.pull-right Available in F.10.718
    else 
       .col-sm-12
@@ -72,7 +73,7 @@ mixin smallProfileCard(status)
             .panel-heading.noborder                                      
                .media-body
                   .pull-left
-                     h3 Tim Witters                                             
+                     h3= attributes.name                                          
                   .pull-right.text-right
                      h5 Next Avaiable                                               
                      h4.nomargin 16:00 in F.10.710
